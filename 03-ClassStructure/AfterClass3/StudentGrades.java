@@ -1,15 +1,15 @@
 
 public class StudentGrades{
-    String studentName;
-    double[] grades;
+    static String studentName;
+    static double[] grades;
     static int number;
     static double lowest;
     static double highest;
     static double average;
 
-    StudentGrades(String name, double[] grades) {
-        this.studentName = name;
-        this.grades = grades;
+    StudentGrades(String name, double[] oceny) {
+        studentName = name;
+        grades = grades;
     }
     
     public static void lowestGrade(double[] grades){
@@ -53,7 +53,7 @@ public class StudentGrades{
         System.out.println(result);
     }
     
-    public void displayRecord(){
+    public static void displayRecord(){
         System.out.println("name: "+studentName);
         System.out.println("grades: "+grades);
         System.out.println("number of grades: "+number);
@@ -63,8 +63,11 @@ public class StudentGrades{
     }
     
     public static void main(String[] args){
+        double[] args1={3.5, 4.5, 4.0, 2.0, 5.0, 3.5, 3.5};
+        double[] args2={2.0, 3.0, 2.0, 4.5, 4.5};
+        
         StudentGrades s1 = new StudentGrades("Amanda", args1);
-        StudentGrades s2 = new StudentGrades("James", args1);
+        StudentGrades s2 = new StudentGrades("James", args2);
         
         s1.displayRecord();
         s2.displayRecord();
