@@ -1,0 +1,21 @@
+public class Triangle extends Shape{
+    private double a,b,c;
+    private double area=0;
+
+    public Triangle(double a, double b, double c){
+        this.a=a;
+        this.b=b;
+        this.c=c;
+    }
+
+    public int area(){
+        double p=(a+b+c)/2;
+        area=sqrt(p(p-a)(p-b)(p-c));
+    }
+
+    public void display(){
+        System.out.println(area);
+    }
+
+    
+}
